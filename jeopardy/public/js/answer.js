@@ -40,10 +40,27 @@ function getAnswers() {
     })
     .then(data => {
       if (data && data[category] && data[category][value] && document.querySelector('.answer-text') === null) {
-        const answer = document.createElement('p');
-        answer.textContent = data[category][value].answer;
-        answer.classList.add('answer-text');
-        answerTextElement.insertBefore(answer, document.querySelector('.main-buttons'));
+        answerData = data[category][value];
+
+        if (answerData.image) {
+          if (document.querySelector('.question-image')) {
+            document.querySelector('.question-image').remove();
+          }
+          const img = document.createElement('img');
+          img.src = answerData.image;
+          img.alt = `Answer image for ${category} - ${value}`;
+          img.classList.add('question-image');
+          img.style.maxWidth = '100%'; // Optional: adjust the size as needed
+          document.querySelector('.question-container').insertBefore(img, document.querySelector('.main-buttons'));
+        }
+
+        if (answerData.answer) {
+          const answer = document.createElement('p');
+          answer.textContent = data[category][value].answer;
+          answer.classList.add('answer-text');
+          answerTextElement.insertBefore(answer, document.querySelector('.main-buttons'));
+        }
+
       } else {
         console.error('Failed to find answer in answers.json:', category, value);
       }

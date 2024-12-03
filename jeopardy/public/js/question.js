@@ -33,6 +33,7 @@ function main() {
           const img = document.createElement('img');
           img.src = questionData.image;
           img.alt = `Image for ${category} - ${value}`;
+          img.classList.add('question-image');
           img.style.maxWidth = '100%'; // Optional: adjust the size as needed
           document.querySelector('.question-container').appendChild(img);
         }

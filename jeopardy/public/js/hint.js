@@ -39,10 +39,27 @@ function getHints() {
     })
     .then(data => {
       if (data && data[category] && data[category][value] && document.querySelector('.hint-text') === null) {
-        const hint = document.createElement('p');
-        hint.textContent = data[category][value].hint;
-        hint.classList.add('hint-text');
-        hintTextElement.insertBefore(hint, document.querySelector('.main-buttons'));
+        hintData = data[category][value];
+
+        if (hintData.image) {
+          if (document.querySelector('.question-image')) {
+            document.querySelector('.question-image').remove();
+          }
+          const img = document.createElement('img');
+          img.src = hintData.image;
+          img.alt = `Hint image for ${category} - ${value}`;
+          img.classList.add('question-image');
+          img.style.maxWidth = '100%'; // Optional: adjust the size as needed
+          document.querySelector('.question-container').insertBefore(img, document.querySelector('.main-buttons'));
+        }
+
+        if (hintData.hint) {
+          const hint = document.createElement('p');
+          hint.textContent = data[category][value].hint;
+          hint.classList.add('hint-text');
+          hintTextElement.insertBefore(hint, document.querySelector('.main-buttons'));
+        }
+
       } else {
         console.error('Failed to find hint in hints.json:', category, value);
       }
