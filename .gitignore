@@ -2,7 +2,5 @@ audio/
 images/
 videos/
 node_modules/
-answers.json
-hints.json
-questions.json
+json/
 players.json
