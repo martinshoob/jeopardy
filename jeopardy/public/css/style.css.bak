@@ -1,0 +1,170 @@
+:root {
+  --scale: 1.5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #282c34;
+  color: white;
+  overflow: hidden;
+}
+
+/* Styles for the game board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 categories */
+  grid-gap: calc(15px * var(--scale));
+  width: calc(90% * var(--scale));
+  max-width: calc(1000px * var(--scale));
+}
+
+.cell {
+  background-color: #0078D7;
+  color: white;
+  text-align: center;
+  font-size: calc(2.5rem * var(--scale));
+  padding: calc(30px * var(--scale));
+  cursor: pointer;
+  user-select: none;
+  border-radius: calc(8px * var(--scale));
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+.cell.clicked {
+  background-color: #444;
+  color: #ccc;
+  cursor: not-allowed;
+  transform: scale(0.98);
+}
+
+.category {
+  background-color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: calc(2.5rem * var(--scale));
+  cursor: default;
+  padding: calc(20px * var(--scale));
+}
+
+/* Styles for the question page */
+.question-container {
+  text-align: center;
+  padding: calc(20px * var(--scale));
+  max-width: calc(800px * var(--scale));
+  margin: auto;
+}
+
+/* Title of the question */
+#question-title {
+  font-size: calc(3rem * var(--scale));
+  margin-bottom: calc(20px * var(--scale));
+  text-transform: uppercase;
+  /*color: #FFD700; /* Gold color for emphasis */
+}
+
+/* Question text styling */
+#question-text {
+  font-size: calc(2rem * var(--scale));
+  margin-bottom: calc(30px * var(--scale));
+  line-height: calc(2.5rem * var(--scale));
+}
+
+/* Styling for images */
+.question-container img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  margin-top: calc(20px * var(--scale));
+  border-radius: calc(8px * var(--scale));
+  box-shadow: 0 calc(4px * var(--scale)) calc(8px * var(--scale)) rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.question-container img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.question-container video {
+  width: 400px;
+}
+
+/* Button styling */
+button {
+  background-color: #0078D7;
+  color: white;
+  font-size: calc(1.5rem * var(--scale));
+  padding: calc(15px * var(--scale)) calc(30px * var(--scale)); /* Adjusted padding for better size */
+  border: none;
+  border-radius: calc(10px * var(--scale)); /* Smoother edges */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 calc(4px * var(--scale)) calc(8px * var(--scale)) rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05); /* Slight growth for hover effect */
+}
+
+button:active {
+  background-color: #003f7f;
+  transform: scale(0.98); /* Slight shrink for pressed effect */
+}
+
+/* Styling for audio and video */
+.question-container {
+  text-align: center;
+  padding: calc(20px * var(--scale));
+  max-width: calc(800px * var(--scale));
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* Přidáno: Seřadí obsah vertikálně */
+  align-items: center; /* Ujistí se, že obsah je zarovnán na střed */
+}
+
+.question-container img,
+.question-container audio,
+.question-container video {
+  margin-bottom: calc(20px * var(--scale)); /* Přidáno: Odstup mezi mediálními prvky a textem/tlačítkem */
+}
+
+.player-buttons-container {
+  position: fixed; /* Fixes the position of the player buttons */
+  top: 50%; /* Center the buttons vertically */
+  transform: translateY(-50%); /* Adjust to perfectly center */
+  left: 0; /* Position it on the left side */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Arrange the buttons vertically */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for each player button */
+.player-button {
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width:100%
+}
+
+.player-button:hover {
+  background-color: #444;
+}

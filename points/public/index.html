@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="board" class="board"></div>
+
+  <!-- Controls -->
+  <div class="question-container">
+    <button id="toggleSignButton" onclick="toggleAddSubtract()">+/-</button>
+    <button onclick="setPoints(100)">+100</button>
+    <button onclick="setPoints(200)">+200</button>
+    <button onclick="setPoints(300)">+300</button>
+    <button onclick="setPoints(400)">+400</button>
+    <button onclick="setPoints(500)">+500</button>
+    <input id="custom-points" type="number" placeholder="Enter points">
+    <button id="resetButton">RESET</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

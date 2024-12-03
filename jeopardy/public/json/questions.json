@@ -1,0 +1,162 @@
+{
+  "Postavy": {
+    "100": {
+      "question": "Postavy - 100",
+      "image": "images/postavy_100.jpg",
+      "audio": null,
+      "video": null
+    },
+    "200": {
+      "question": "Postavy - 200",
+      "image": null,
+      "audio": null,
+      "video": "videos/postavy_200.webm"
+    },
+    "300": {
+      "question": "Postavy - 300",
+      "image": null,
+      "audio": "audio/postavy_300.mp3",
+      "video": null
+    },
+    "400": {
+      "question": "Postavy - 400",
+      "image": null,
+      "audio": "audio/postavy_400.mp3",
+      "video": null
+    },
+    "500": {
+      "question": "Postavy - 500",
+      "image": "images/postavy_500.jpg",
+      "audio": null,
+      "video": "videos/postavy_500.mp4"
+    }
+  },
+  "Epizody": {
+    "100": {
+      "question": "Epizody - 100",
+      "image": "images/epizody_100.jpg",
+      "audio": null,
+      "video": null
+    },
+    "200": {
+      "question": "Epizody - 200",
+      "image": null,
+      "audio": "audio/epizody_200.mp3",
+      "video": null
+    },
+    "300": {
+      "question": "Epizody - 300",
+      "image": null,
+      "audio": null,
+      "video": "videos/epizody_300.mp4"
+    },
+    "400": {
+      "question": "Epizody - 400",
+      "image": "images/epizody_400.jpg",
+      "audio": null,
+      "video": null
+    },
+    "500": {
+      "question": "Epizody - 500",
+      "image": null,
+      "audio": "audio/epizody_500.mp3",
+      "video": null
+    }
+  },
+  "Hudba": {
+    "100": {
+      "question": "Hudba - 100",
+      "image": "images/hudba_100.jpg",
+      "audio": null,
+      "video": null
+    },
+    "200": {
+      "question": "Hudba - 200",
+      "image": null,
+      "audio": "audio/hudba_200.mp3",
+      "video": null
+    },
+    "300": {
+      "question": "Hudba - 300",
+      "image": null,
+      "audio": null,
+      "video": "videos/hudba_300.mp4"
+    },
+    "400": {
+      "question": "Hudba - 400",
+      "image": "images/hudba_400.jpg",
+      "audio": null,
+      "video": null
+    },
+    "500": {
+      "question": "Hudba - 500",
+      "image": null,
+      "audio": "audio/hudba_500.mp3",
+      "video": null
+    }
+  },
+  "Merch": {
+    "100": {
+      "question": "Merch - 100",
+      "image": "images/merch_100.jpg",
+      "audio": null,
+      "video": null
+    },
+    "200": {
+      "question": "Merch - 200",
+      "image": null,
+      "audio": "audio/merch_200.mp3",
+      "video": null
+    },
+    "300": {
+      "question": "Merch - 300",
+      "image": null,
+      "audio": null,
+      "video": "videos/merch_300.mp4"
+    },
+    "400": {
+      "question": "Merch - 400",
+      "image": "images/merch_400.jpg",
+      "audio": null,
+      "video": null
+    },
+    "500": {
+      "question": "Merch - 500",
+      "image": null,
+      "audio": "audio/merch_500.mp3",
+      "video": null
+    }
+  },
+  "Test": {
+    "100": {
+      "question": "Test - 100",
+      "image": null,
+      "audio": null,
+      "video": null
+    },
+    "200": {
+      "question": "Test - 200",
+      "image": null,
+      "audio": null,
+      "video": null
+    },
+    "300": {
+      "question": "Tets - 300",
+      "image": null,
+      "audio": null,
+      "video": null
+    },
+    "400": {
+      "question": "Test - 400",
+      "image": null,
+      "audio": null,
+      "video": null
+    },
+    "500": {
+      "question": "Test - 500",
+      "image": null,
+      "audio": null,
+      "video": null
+    }
+  }
+}

@@ -1,0 +1,55 @@
+const express = require("express");
+const bodyParser = require("body-parser");
+const fs = require("fs");
+const app = express();
+
+const PORT = 3000;
+const JSON_FILE = "players.json";
+
+// Middleware
+app.use(bodyParser.json());
+app.use(express.static("public")); // Serve static files like HTML, CSS, JS
+
+// Get player data
+app.get("/players", (req, res) => {
+  fs.readFile(JSON_FILE, "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading JSON file:", err);
+      return res.status(500).send("Error reading player data.");
+    }
+    res.json(JSON.parse(data));
+  });
+});
+
+// Update player points
+app.post("/update", (req, res) => {
+  const { index, points } = req.body;
+
+  fs.readFile(JSON_FILE, "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading JSON file:", err);
+      return res.status(500).send("Error reading player data.");
+    }
+
+    let players = JSON.parse(data).players;
+    if (index < 0 || index >= players.length) {
+      return res.status(400).send("Invalid player index.");
+    }
+
+    // Update points
+    players[index].points = points;
+
+    fs.writeFile(JSON_FILE, JSON.stringify({ players }, null, 2), (err) => {
+      if (err) {
+        console.error("Error writing JSON file:", err);
+        return res.status(500).send("Error saving player data.");
+      }
+      res.send("Player points updated successfully.");
+    });
+  });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
