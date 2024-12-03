@@ -1,0 +1,87 @@
+{
+  "Postavy": {
+    "100": {
+      "hint": "Jmenujte 2 záporné postavy, které se vždy objevují v páru."
+    },
+    "200": {
+      "hint": "Postavy - 200"
+    },
+    "300": {
+      "hint": "Postavy - 300"
+    },
+    "400": {
+      "hint": "Postavy - 400"
+    },
+    "500": {
+      "hint": "Postavy - 500"
+    }
+  },
+  "Epizody": {
+    "100": {
+      "hint": "Epizody - 100"
+    },
+    "200": {
+      "hint": "Epizody - 200"
+    },
+    "300": {
+      "hint": "Epizody - 300"
+    },
+    "400": {
+      "hint": "Epizody - 400"
+    },
+    "500": {
+      "hint": "Epizody - 500"
+    }
+  },
+  "Hudba": {
+    "100": {
+      "hint": "Hudba - 100"
+    },
+    "200": {
+      "hint": "Hudba - 200"
+    },
+    "300": {
+      "hint": "Hudba - 300"
+    },
+    "400": {
+      "hint": "Hudba - 400"
+    },
+    "500": {
+      "hint": "Hudba - 500"
+    }
+  },
+  "Merch": {
+    "100": {
+      "hint": "Merch - 100"
+    },
+    "200": {
+      "hint": "Merch - 200"
+    },
+    "300": {
+      "hint": "Merch - 300"
+    },
+    "400": {
+      "hint": "Merch - 400"
+    },
+    "500": {
+      "hint": "Merch - 500"
+    }
+  },
+  "Test": {
+    "100": {
+      "hint": "Test - 100"
+    },
+    "200": {
+      "hint": "Test - 200"
+    },
+    "300": {
+      "hint": "Tets - 300"
+    },
+    "400": {
+      "hint": "Test - 400"
+    },
+    "500": {
+      "hint": "Test - 500"
+    }
+  }
+}

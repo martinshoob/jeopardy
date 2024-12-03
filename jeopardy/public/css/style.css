@@ -11,7 +11,7 @@ body {
   margin: 0;
   background-color: #282c34;
   color: white;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 
@@ -129,6 +129,11 @@ button:active {
   transform: scale(0.98); 
 }
 
+.main-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: calc(20px * var(--scale));
+}
 
 .question-container {
   text-align: center;
@@ -175,4 +180,9 @@ button:active {
 
 .player-button:hover {
   background-color: #444;
+}
+
+.answer-text, .hint-text {
+  font-size: calc(2rem * var(--scale));
+  margin-bottom: calc(20px * var(--scale));
 }

@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
   main();
 });
 
+document.addEventListener('click', function (e) {
+  if (e.target.id === 'back-button') {
+    goBack();
+  }
+});
+
 function main() {
   const params = new URLSearchParams(window.location.search);
   const category = params.get('category');
@@ -51,10 +57,25 @@ function main() {
         document.getElementById('question-text').innerText = "Question not found.";
       }
 
+      const buttonContainer = document.createElement('div');
+      buttonContainer.classList.add('main-buttons');  // Apply the class to the container
+
       const button = document.createElement('button');
       button.innerText = 'Zpět';
-      button.onclick = goBack;
-      document.querySelector('.question-container').appendChild(button);
+      button.id = 'back-button';
+      buttonContainer.appendChild(button);
+
+      const button2 = document.createElement('button');
+      button2.innerText = 'Odpověď';
+      button2.id = 'answer-button';
+      buttonContainer.appendChild(button2);
+
+      const button3 = document.createElement('button');
+      button3.innerText = 'Nápověda';
+      button3.id = 'hint-button';
+      buttonContainer.appendChild(button3);
+
+      document.querySelector('.question-container').appendChild(buttonContainer);
 
     })
     .catch(error => {
