@@ -1,5 +1,12 @@
-const categories = ["Postavy", "Epizody", "Hudba", "Merch", "Test"];
+const categories = ["Obecná znalost", "Kdo jak?", "Statistiky", "Vnitroherní znalosti", "Memeš"];
 const values = [100, 200, 300, 400, 500];
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Tell admin we are on the main board (clear the answer view)
+  if (typeof reportToAdmin === 'function') {
+    reportToAdmin({ state: 'board_view' });
+  }
+});
 
 const loadClickedState = () => {
   const clickedCells = JSON.parse(localStorage.getItem('clickedCells')) || [];

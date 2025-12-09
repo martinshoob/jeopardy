@@ -85,6 +85,23 @@ function main() {
         "There was an error loading the question. Please try again later.";
     });
 
+  fetch('./json/answers.json')
+    .then(response => response.json())
+    .then(data => {
+      const answerData = data[category]?.[value];
+      const answerText = answerData ? answerData.answer : "Answer not found";
+
+      // Send to Admin via the remote.js helper
+      if (typeof reportToAdmin === 'function') {
+        reportToAdmin({
+          state: 'question_open',
+          category: category,
+          value: value,
+          answer: answerText
+        });
+      }
+    });
+
   // Fetch players from the scoreboard
   fetch("http://localhost:3000/players")
     .then(response => {

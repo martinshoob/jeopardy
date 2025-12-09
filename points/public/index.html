@@ -3,13 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Score Tracker</title>
+  <title>Score Tracker & Admin</title>
   <link rel="stylesheet" href="styles.css">
-</head>
+  <script src="/socket.io/socket.io.js"></script> </head>
 <body>
+  <div id="admin-panel" style="background: #333; color: white; padding: 15px; margin-bottom: 20px; border-radius: 8px;">
+    <h2>Admin Hub</h2>
+      <div id="current-answer-box" style="background: #222; padding: 10px; border-left: 5px solid gold; display: none;">
+          <strong>Current Question:</strong> <span id="admin-q-text">None</span><br>
+          <strong style="color: gold; font-size: 1.2em;">ANSWER:</strong> <span id="admin-a-text">...</span>
+          
+          <div style="margin-top: 15px; border-top: 1px solid #555; padding-top: 10px;">
+              <p style="margin: 0 0 5px 0; font-size: 0.9em; color: #aaa;">Přičíst body hráči:</p>
+              <div id="quick-score-buttons" style="display: flex; gap: 5px; flex-wrap: wrap;">
+                  </div>
+          </div>
+      </div>
+    <div id="remote-controls" style="margin-top: 10px;">
+        <button onclick="sendRemoteCommand('back')" style="background-color: #d9534f; color: white;">Return Board to Home</button>
+    </div>
+  </div>
+
   <div id="board" class="board"></div>
 
-  <!-- Controls -->
   <div class="question-container">
     <button id="toggleSignButton" onclick="toggleAddSubtract()">+/-</button>
     <button onclick="setPoints(100)">+100</button>
@@ -20,6 +36,9 @@
     <input id="custom-points" type="number" placeholder="Enter points">
     <button id="resetButton">RESET</button>
   </div>
+
+  <div id="nav-grid" style="margin-top: 20px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px;">
+    </div>
 
   <script src="script.js"></script>
 </body>
