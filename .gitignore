@@ -1,6 +1,7 @@
-audio/
-images/
-videos/
+jeopardy/public/audios/*
+jeopardy/public/images/*
+jeopardy/public/videos/*
 node_modules/
-json/
+jeopardy/public/json/*
 players.json
+.idea/*
