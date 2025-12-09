@@ -53,6 +53,29 @@ function getHints() {
           document.querySelector('.question-container').insertBefore(img, document.querySelector('.main-buttons'));
         }
 
+        if (hintData.audio) {
+          if(document.querySelector('.question-audio')) {
+            document.querySelector('.question-audio').remove();
+          }
+          const audio = document.createElement('audio');
+          audio.controls = true;
+          audio.src = hintData.audio;
+          audio.alt = `Hint audio for ${category} - ${value}`;
+          document.querySelector('.question-container').insertBefore(audio, document.querySelector('.main-buttons'));
+        }
+
+        if (hintData.video) {
+          if(document.querySelector('.question-video')) {
+              document.querySelector('.question-video').remove();
+          }
+          const video = document.createElement('video');
+          video.controls = true;
+          video.src = hintData.video;
+          video.alt = `Hint video for ${category} - ${value}`;
+          video.style.maxWidth = '100%'; // Optional: adjust the size as needed
+          document.querySelector('.question-container').insertBefore(video, document.querySelector('.main-buttons'));
+        }
+
         if (hintData.hint) {
           const hint = document.createElement('p');
           hint.textContent = data[category][value].hint;
